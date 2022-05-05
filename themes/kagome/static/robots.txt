@@ -1,0 +1,9 @@
+User-agent: Googlebot
+Disallow: /about/
+Disallow: /links/
+Disallow: /tags/
+
+User-agent: *
+Disallow: /
+
+Sitemap: https://qwqaq.com/sitemap.xml

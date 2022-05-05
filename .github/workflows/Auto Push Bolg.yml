@@ -1,0 +1,59 @@
+name: update
+
+on:
+ push:
+    branches:
+    - master  # master分支提交的时候的触发github actions
+    paths-ignore: # 下列文件的变更不触发部署，可以自行添加
+    - 'archetypes/**'
+    - 'content/**'
+    - 'data/**'
+    - 'layouts/**'
+    - 'resources/**'
+    - 'static/**'
+    - '.hugo_build.lock'
+    - 'config.toml'
+    - '.git/**'
+jobs: #job 名字，不能带有空格
+  build:
+      runs-on: ubuntu-latest
+      steps:
+      - name: Checkout     #用第三方action，用于checkout代码到actions的虚拟环境下
+        uses: actions/checkout@v2 
+        with:
+          submodules: true 
+        # Fetch all history for .GitInfo and .Lastmod 
+          fetch-depth: 0    
+      - name: Install Apache #ssh服务器安装Apache服务
+        uses: appleboy/ssh-action@master
+        with: 
+         host: ${{ secrets.BLOG_DEPLOY_HOST }} #主机
+         username: root                        #用户名
+         key: ${{ secrets.BLOG_DEPLOY_KEY }}   #私钥
+         port: 22                              #端口
+         script: |
+          if [ ! -d "/var/www" ];then          #不会判断服务存在，这里判断服务目录是否存在
+           yum install httpd -y                #安装Apache
+           sed -i 's@/var/www/html@/var/www/hugo/public@g' /etc/httpd/conf/httpd.conf   #替换默认目录
+           mkdir /var/www/hugo /var/www/hugo/public
+           systemctl restart httpd
+           systemctl enable httpd
+          fi
+      - name: Setup Hugo 
+        uses: peaceiris/actions-hugo@v2  
+        with:
+          extended: true 
+      - name: Build       # 构建编译静态站点
+        run: |
+          hugo --minify
+      - uses: webfactory/ssh-agent@v0.5.4  # 使用第三方action，用于ssh私钥缓存  secrets.BLOG_DEPLOY_KEY这个变量会在github项目setting->secret中设置，后面介绍
+        with:
+          ssh-private-key: |
+              ${{ secrets.BLOG_DEPLOY_KEY }}
+      - name: Scan public keys # 使用 ssh-keyscan 命令扫描我们服务器的公钥并保存到github actions虚拟环境的 ~/.ssh/known_hosts 中，用于工作流的无人值守
+        run: |
+         ssh-keyscan ${{ secrets.BLOG_DEPLOY_HOST }} >> ~/.ssh/known_hosts 
+      - name: Deploy  # 部署 通过rsync将虚拟环境下编译好的public目录同步到我们的服务器指定目录下。rsync --delete会删除目的目录中不在源目录中的文件。
+        run: |
+         rsync -av --delete public root@${{ secrets.BLOG_DEPLOY_HOST }}:/var/www/hugo/
+     
