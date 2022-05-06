@@ -2,22 +2,22 @@
 title: " "
 date: {{ .Date }}
 timezone: "UTC+8"
-tags: ['🏷️', '🏷️', '🏷️', '🏷️']
-categories: ['', '', '', '']
-description: ''
-weight: 1
-draft: false
-cover: "/images/.jpg"
-toc: true
-grow: large | full
-math: md
-aplayer: true
+tags: ['🏷️', '🏷️', '🏷️', '🏷️']  #标签
+categories: ['', '', '', '']  #分类
+description: ''  #描述
+weight: 1  #置顶，1显示第一，依次递减
+draft: false 
+cover: "/images/.jpg" #封面图
+toc: true  #左边目录显示控制
+grow: large | full   #封面图片大小，large占两个格子，full占一栏
+math: md  #数学符号
+aplayer: true  #aplayer支持
 dplayer: true
-math: true
----
+math: true   #litax渲染
+slug: {{ substr (md5 (printf "%s%s" .Date (replace .TranslationBaseName "-" " " | title))) 4 8 }} #日期和标题计算哈希值，生成永久链接
 ---
 ## BGM起
-<!-- 音乐aplayer，实际写的时候 '['替换为 '{' ']'替换为'}' -->
+<!-- 音乐aplayer， -->
 {{<aplayer
     url="https://qiniu.sukoshi.xyz/public/music/鹿乃 - アイロニ.mp3"
     name="アイロニ"
@@ -26,16 +26,17 @@ math: true
     lrc="https://qiniu.sukoshi.xyz/public/music/鹿乃 - アイロニ.lrc"
     lrcType="3"
 >}}
-
+<!--B站视频应用-->
 {{< bilibili av498363026 >}}
+<!--油管视频引用-->
 {{< youtube hDy9BrB9_VU >}}
 
 
-<!-- 视频调用dplyer，实际写的时候 '['替换为 '{' ']'替换为'}' -->
-[[< dplayer
+<!-- 视频调用dplyer， -->
+{{< dplayer
     url="https://qiniu.sukoshi.xyz/video/%E7%BE%8E.mp4"
     pic="https://qiniu.sukoshi.xyz/video/%E7%BE%8E.mp4?vframe/jpg/offset/10"
->]]
+>}}
 
 
 
@@ -46,7 +47,7 @@ math: true
 <div>
 <div> 著作权归作者所有。</div>
 <div> 商业转载请联系作者获得授权，非商业转载请注明出处。</div>    
-<div>来源 <a target="_blank" href="www.yoke.ink"> © Yoke's Blog </a></div>  
+<div>来源 <a target="_blank" href="glaze.lovekevn.top> © LoveGlaze's Blog </a></div>  
 
  <div class="copyright-text">作品采用 <a class="text-decoration-none" target="_blank" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
  知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议 </a>进行许可 </div></div>

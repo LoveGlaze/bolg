@@ -1,6 +1,6 @@
-#baseURL = 'http://example.org/'
+#baseURL = 'https://yoke.ink/'
 languageCode = "zh-CN"
-title = 'LoveGlaze的博客'
+title = 'LoveGlaze'
 theme = "kagome"
 math = true
 #主页按钮
@@ -64,7 +64,7 @@ math = true
     # 名称
     name = "instagram"
     # url地址
-    url = "https://www.instagram.com/yokeagoni/"
+    url = "https://www.instagram.com/LoveGlaze/"
     # 权重 越小越靠前
     weight = 3
 
@@ -77,9 +77,12 @@ math = true
 ##params 字段的内容可供主题模板读取
 [params]
     beian='滇ICP备2021002928号-1'
-    mainSections='posts,soul'
+    mainSections='posts,soul' ##主页显示内容
+##aplayer配置，dplayer同
 [params.aplayer]
-    autoplay=false
+    autoplay=true
+    mutex=true
+##具体可以看https://kikyo.cc/posts/202106091132/
 
 ##代码高亮
 [markup]
@@ -93,7 +96,11 @@ math = true
         noClasses = true
         style = "dracula"
         tabWidth = 4
+##页面内可以正常显示js
 [markup.goldmark.renderer]
 unsafe= true
+##永久链接
+[permalinks]
+  posts = "/post/:slug"
 
 

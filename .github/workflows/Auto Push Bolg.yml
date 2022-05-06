@@ -24,21 +24,6 @@ jobs: #job 名字，不能带有空格
           submodules: true 
         # Fetch all history for .GitInfo and .Lastmod 
           fetch-depth: 0    
-      - name: Install Apache #ssh服务器安装Apache服务
-        uses: appleboy/ssh-action@master
-        with: 
-         host: ${{ secrets.BLOG_DEPLOY_HOST }} #主机
-         username: root                        #用户名
-         key: ${{ secrets.BLOG_DEPLOY_KEY }}   #私钥
-         port: 22                              #端口
-         script: |
-          if [ ! -d "/var/www" ];then          #不会判断服务存在，这里判断服务目录是否存在
-           yum install httpd -y                #安装Apache
-           sed -i 's@/var/www/html@/var/www/hugo/public@g' /etc/httpd/conf/httpd.conf   #替换默认目录
-           mkdir /var/www/hugo /var/www/hugo/public
-           systemctl restart httpd
-           systemctl enable httpd
-          fi
       - name: Setup Hugo 
         uses: peaceiris/actions-hugo@v2  
         with:
