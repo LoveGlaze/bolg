@@ -72,7 +72,7 @@ math = true
     name = "LoveGlaze"
     email = "617683180@qq.com"
     description = "年轻且优秀，积极且颓废"
-    avatar = "/images/head.jpg"
+    avatar = "/images/LoveGlaze.jpg"
 
 ##params 字段的内容可供主题模板读取
 [params]
