@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Yoke</title>
+    <link>/categories/</link>
+    <description>Recent content in Categories on Yoke</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <managingEditor>qi12181014@gmail.com (Yoke)</managingEditor>
+    <webMaster>qi12181014@gmail.com (Yoke)</webMaster>
+    <lastBuildDate>Fri, 06 May 2022 01:28:40 +0800</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>碎念</title>
+      <link>/categories/%E7%A2%8E%E5%BF%B5/</link>
+      <pubDate>Fri, 06 May 2022 01:28:40 +0800</pubDate>
+      <author>qi12181014@gmail.com (Yoke)</author>
+      <guid>/categories/%E7%A2%8E%E5%BF%B5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>置顶</title>
+      <link>/categories/%E7%BD%AE%E9%A1%B6/</link>
+      <pubDate>Fri, 06 May 2022 01:28:40 +0800</pubDate>
+      <author>qi12181014@gmail.com (Yoke)</author>
+      <guid>/categories/%E7%BD%AE%E9%A1%B6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>友稿</title>
+      <link>/categories/%E5%8F%8B%E7%A8%BF/</link>
+      <pubDate>Fri, 06 May 2022 01:27:33 +0800</pubDate>
+      <author>qi12181014@gmail.com (Yoke)</author>
+      <guid>/categories/%E5%8F%8B%E7%A8%BF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>/categories/python/</link>
+      <pubDate>Fri, 06 May 2022 01:26:05 +0800</pubDate>
+      <author>qi12181014@gmail.com (Yoke)</author>
+      <guid>/categories/python/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

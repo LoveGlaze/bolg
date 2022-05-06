@@ -1,0 +1,101 @@
+#baseURL = 'http://example.org/'
+languageCode = "zh-CN"
+title = 'Yoke的博客'
+theme = "kagome"
+math = true
+#主页按钮
+[[menu.main]]
+    identifier = 'home'
+    name = '🏠主页'
+    title = 'home'
+    url = '/'
+    weight = 10
+#归档按钮
+[[menu.main]]
+    identifier = 'posts'
+    name = '🎨 灵境'
+    title = 'posts' 
+    url = '/posts/'
+    weight = 20
+#归档按钮
+[[menu.main]]
+    identifier = 'soul'
+    name = '🎼 碎念'
+    title = 'soul' 
+    url = '/soul/'
+    weight = 30
+#关于按钮
+[[menu.main]]
+    identifier = 'about'
+    name = '😈 关于'
+    title = 'about' 
+    url = '/about/'
+    weight = 40
+    #友链按钮
+[[menu.main]]
+    identifier = 'link'
+    name = '🔗 LINK'
+    title = '友链' 
+    url = '/link'
+    weight = 50
+
+#社交菜单
+[[menu.social]]
+    # 唯一标识符
+    identifier = "github"
+    # 名称
+    name = "github"
+    # url地址
+    url = "https://github.com/Yokeagoni"
+    # 权重 越小越靠前
+    weight = 1
+[[menu.social]]
+    # 唯一标识符
+    identifier = "twitter"
+    # 名称
+    name = "Twitter"
+    # url地址
+    url = "https://twitter.com/YokeAgoni"
+    # 权重 越小越靠前
+    weight = 2
+[[menu.social]]
+    # 唯一标识符
+    identifier = "instagram"
+    # 名称
+    name = "instagram"
+    # url地址
+    url = "https://www.instagram.com/yokeagoni/"
+    # 权重 越小越靠前
+    weight = 3
+
+[author]
+    name = "Yoke"
+    email = "qi12181014@gmail.com"
+    description = "年轻且优秀，积极且颓废"
+    avatar = "/images/head.jpg"
+
+##params 字段的内容可供主题模板读取
+[params]
+    beian='滇ICP备2022000542号﹣1'
+    mainSections='posts,soul'
+[params.aplayer]
+    autoplay=false
+
+##代码高亮
+[markup]
+    [markup.highlight]
+        codeFences = true
+        guessSyntax = false
+        hl_Lines = ""
+        lineNoStart = 1
+        lineNos = true
+        lineNumbersInTable = true
+        noClasses = true
+        style = "dracula"
+        tabWidth = 4
+[markup.goldmark.renderer]
+unsafe= true
+[permalinks]
+  posts = "/post/:slug"
+
+

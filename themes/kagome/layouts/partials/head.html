@@ -2,7 +2,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <link rel="icon" type="image/x-icon" href="/image/icon.png" />
   {{ if or .Params.author .Site.Author.name }} {{/* author */}}
     <meta name="author" content="{{- or .Params.author .Site.Author.name -}}">
   {{ end }}
@@ -24,8 +24,8 @@
   {{ end }}
 
   {{ hugo.Generator }}
-  
-  
+
+
   {{ $title := .Site.Title }}
   {{ with .Params.Title }}
   {{ $title = printf "%s 🌟 %s" . $title }}
@@ -46,7 +46,7 @@
   {{- $opts := dict "targetPath" "assets/js/main.min.js" "minify" hugo.IsProduction -}}
   {{- $script := $js | js.Build $opts | resources.Fingerprint "sha256" -}}
   <script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}"></script>
-  
+
   {{ with .OutputFormats.Get "rss" -}}
   {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
   {{ end -}}
