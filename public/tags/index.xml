@@ -1,37 +1,46 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Yoke</title>
+    <title>Tags on LoveGlaze</title>
     <link>/tags/</link>
-    <description>Recent content in Tags on Yoke</description>
+    <description>Recent content in Tags on LoveGlaze</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <managingEditor>qi12181014@gmail.com (Yoke)</managingEditor>
-    <webMaster>qi12181014@gmail.com (Yoke)</webMaster>
-    <lastBuildDate>Fri, 06 May 2022 01:28:40 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <managingEditor>617683180@qq.com (LoveGlaze)</managingEditor>
+    <webMaster>617683180@qq.com (LoveGlaze)</webMaster>
+    <lastBuildDate>Sat, 07 May 2022 11:59:06 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>🏷️置顶</title>
-      <link>/tags/%EF%B8%8F%E7%BD%AE%E9%A1%B6/</link>
-      <pubDate>Fri, 06 May 2022 01:28:40 +0800</pubDate>
-      <author>qi12181014@gmail.com (Yoke)</author>
-      <guid>/tags/%EF%B8%8F%E7%BD%AE%E9%A1%B6/</guid>
+      <title>🏷️短篇</title>
+      <link>/tags/%EF%B8%8F%E7%9F%AD%E7%AF%87/</link>
+      <pubDate>Sat, 07 May 2022 11:59:06 +0800</pubDate>
+      <author>617683180@qq.com (LoveGlaze)</author>
+      <guid>/tags/%EF%B8%8F%E7%9F%AD%E7%AF%87/</guid>
       <description></description>
     </item>
     
     <item>
       <title>🏷️随笔</title>
       <link>/tags/%EF%B8%8F%E9%9A%8F%E7%AC%94/</link>
-      <pubDate>Fri, 06 May 2022 01:28:40 +0800</pubDate>
-      <author>qi12181014@gmail.com (Yoke)</author>
+      <pubDate>Sat, 07 May 2022 11:59:06 +0800</pubDate>
+      <author>617683180@qq.com (LoveGlaze)</author>
       <guid>/tags/%EF%B8%8F%E9%9A%8F%E7%AC%94/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>🏷️置顶</title>
+      <link>/tags/%EF%B8%8F%E7%BD%AE%E9%A1%B6/</link>
+      <pubDate>Fri, 06 May 2022 01:28:40 +0800</pubDate>
+      <author>617683180@qq.com (LoveGlaze)</author>
+      <guid>/tags/%EF%B8%8F%E7%BD%AE%E9%A1%B6/</guid>
       <description></description>
     </item>
     
     <item>
       <title>🏷️短篇小说</title>
       <link>/tags/%EF%B8%8F%E7%9F%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/</link>
-      <pubDate>Fri, 06 May 2022 01:27:33 +0800</pubDate>
-      <author>qi12181014@gmail.com (Yoke)</author>
+      <pubDate>Mon, 02 May 2022 23:18:01 +0800</pubDate>
+      <author>617683180@qq.com (LoveGlaze)</author>
       <guid>/tags/%EF%B8%8F%E7%9F%AD%E7%AF%87%E5%B0%8F%E8%AF%B4/</guid>
       <description></description>
     </item>
@@ -39,8 +48,8 @@
     <item>
       <title>🏷️Python</title>
       <link>/tags/%EF%B8%8Fpython/</link>
-      <pubDate>Fri, 06 May 2022 01:26:05 +0800</pubDate>
-      <author>qi12181014@gmail.com (Yoke)</author>
+      <pubDate>Sun, 01 May 2022 23:46:51 +0800</pubDate>
+      <author>617683180@qq.com (LoveGlaze)</author>
       <guid>/tags/%EF%B8%8Fpython/</guid>
       <description></description>
     </item>
@@ -48,8 +57,8 @@
     <item>
       <title>🏷️爬虫</title>
       <link>/tags/%EF%B8%8F%E7%88%AC%E8%99%AB/</link>
-      <pubDate>Fri, 06 May 2022 01:26:05 +0800</pubDate>
-      <author>qi12181014@gmail.com (Yoke)</author>
+      <pubDate>Sun, 01 May 2022 23:46:51 +0800</pubDate>
+      <author>617683180@qq.com (LoveGlaze)</author>
       <guid>/tags/%EF%B8%8F%E7%88%AC%E8%99%AB/</guid>
       <description></description>
     </item>
