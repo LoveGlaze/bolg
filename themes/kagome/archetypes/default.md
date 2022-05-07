@@ -11,7 +11,6 @@ math: md
 aplayer: true
 dplayer: true
 ---
-##BGM起
 <!-- 音乐aplayer，实际写的时候 '['替换为 '{' ']'替换为'}' -->
 [[< aplayer
     url="https://qiniu.sukoshi.xyz/public/music/鹿乃 - アイロニ.mp3"
